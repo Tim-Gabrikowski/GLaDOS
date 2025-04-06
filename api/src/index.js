@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 	res.send("Hello World!");
 });
 app.get("/chat", async (req, res) => {
-	const prompt = req.query.prompt || "What should my next hobby be?";
+	const prompt = req.query.prompt;
 	try {
 		const response = await getAiResponse(prompt);
 		res.json({ response });
