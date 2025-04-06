@@ -1,0 +1,15 @@
+# Model card for glados (high)
+
+* Language: en-us (English, United States)
+* Speakers: 1
+* Quality: high
+* Samplerate: 22050Hz
+
+## Dataset
+
+* URL: https://github.com/robit-man/Ellen-McLain-Dataset
+* License: http://unlicense.org
+
+## Training
+
+Finetuned from: U.S. Lessac voice (high quality)
