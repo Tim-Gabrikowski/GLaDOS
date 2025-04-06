@@ -35,14 +35,18 @@ const MESSAGES = [
 
 import fetch from "node-fetch";
 
-export async function getAiResponse(prompt) {
+export async function getAiResponse(prompt, prevousMessages) {
 	let response = await fetch("http://localhost:11434/api/chat", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
 		},
 		body: JSON.stringify({
-			messages: [...MESSAGES, { role: "user", content: prompt }],
+			messages: [
+				...MESSAGES,
+				...prevousMessages,
+				{ role: "user", content: prompt },
+			],
 			model: "gemma3:1b",
 			stream: false,
 		}),
