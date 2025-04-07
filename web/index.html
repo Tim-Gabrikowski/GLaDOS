@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GLaDOS - Voice AI</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<template id="message-template-orange">
+			<div class="message orange">
+				<div class="message-header">
+					<span class="message-sender"></span>
+					<span class="message-timestamp"></span>
+				</div>
+				<div class="message-content"></div>
+			</div>
+		</template>
+		<template id="message-template-blue">
+			<div class="message blue">
+				<div class="message-header">
+					<span class="message-sender"></span>
+					<span class="message-timestamp"></span>
+				</div>
+				<div class="message-content"></div>
+			</div>
+		</template>
+		<div class="message">
+			<div class="message-header">
+				<span class="message-sender">System</span>
+				<span class="message-timestamp"></span>
+			</div>
+			<div class="message-content">
+				Chat with GLaDOS. Use /reset to clear the chat history.
+			</div>
+		</div>
+		<div id="chat"></div>
+		<div id="input-container">
+			<input type="text" name="prompt" id="prompt" class="blue" />
+			<button id="submit" class="blue">Submit</button>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>

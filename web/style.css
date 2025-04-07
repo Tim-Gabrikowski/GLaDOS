@@ -1,0 +1,121 @@
+/* style.css */
+
+* {
+	box-sizing: border-box;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	--orange: #ee7f1b;
+	--blue: #0082c4;
+}
+
+body {
+	background-color: #0d0d0d;
+	color: #e0e0e0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 100vh;
+	padding: 1rem;
+}
+
+#chat {
+	flex-grow: 1;
+	overflow-y: auto;
+	padding: 0rem;
+	margin-bottom: 1rem;
+}
+
+/* Message template */
+.message {
+	background-color: #1e1e1e;
+	border-left: 4px solid #fff;
+	padding: 0.75rem 1rem;
+	margin-bottom: 0.75rem;
+	border-radius: 8px;
+	transition: background-color 0.3s ease;
+}
+.message.orange {
+	border-color: var(--orange);
+}
+.message.blue {
+	border-color: var(--blue);
+}
+
+.message:hover {
+	background-color: #252525;
+}
+
+.message-header {
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.85rem;
+	color: #aaaaaa;
+	margin-bottom: 0.25rem;
+}
+
+.message-sender {
+	font-weight: bold;
+	color: #fff;
+}
+.blue .message-sender {
+	color: var(--blue);
+}
+.orange .message-sender {
+	color: var(--orange);
+}
+
+.message-timestamp {
+	font-style: italic;
+}
+
+.message-content {
+	font-size: 1rem;
+	line-height: 1.4;
+	color: #f0f0f0;
+}
+
+/* Input container */
+#input-container {
+	display: flex;
+	border-top: 1px solid #333;
+	padding-top: 1rem;
+	gap: 0.5rem;
+}
+
+#prompt {
+	flex: 1;
+	padding: 0.75rem 1rem;
+	border-radius: 8px;
+	border: none;
+	background-color: #1e1e1e;
+	color: #ffffff;
+	font-size: 1rem;
+	box-shadow: inset 0 0 5px #00000088;
+}
+
+#prompt:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px #fff;
+}
+#prompt:focus.orange {
+	box-shadow: 0 0 0 2px var(--orange);
+}
+#prompt:focus.blue {
+	box-shadow: 0 0 0 2px var(--blue);
+}
+
+#submit {
+	padding: 0.75rem 1.25rem;
+	border: none;
+	border-radius: 8px;
+	background-color: var(--orange);
+	color: #0d0d0d;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+#submit:hover {
+	background-color: var(--blue);
+}
