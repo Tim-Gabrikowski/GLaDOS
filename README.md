@@ -17,3 +17,7 @@ npm run dev
 ```
 
 The API should be listening to requests on port `3000` (if not stated otherwise using `PORT` env-variable)
+
+(make sure to run it on Linux, because the boundled piper binary is compiled for linux)
+
+(Docker Image WIP)
