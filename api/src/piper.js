@@ -21,9 +21,9 @@ const silenceBytes = silenceSamples * (bitDepth / 8) * numChannels;
 
 const silenceBuffer = Buffer.alloc(silenceBytes, 0);
 
-const piperExecutable = "/home/tim/applications/piper/piper";
-const modelPath =
-	"/mnt/c/Users/tim/Documents/Projekte/GLaDOS/tts/voices/en-us-glados-high.onnx";
+const piperExecutable = join(dirname, "../../tts/piper/piper");
+const modelPath = join(dirname, "../../tts/voices/en-us-glados-high.onnx");
+
 
 export function streamTextResponse(text, response) {
 	text = text.trim().replace(/\*/g, "");
