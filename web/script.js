@@ -47,6 +47,8 @@ async function submitMessage() {
 		content: response,
 		color: "orange",
 	});
+	let link = "http://localhost:3000/tts?text=" + encodeURIComponent(response);
+	setAudioLink(link);
 }
 
 function createMessageElement(data) {
@@ -64,4 +66,8 @@ function createMessageElement(data) {
 		top: document.getElementById("chat").scrollHeight,
 		behavior: "smooth",
 	});
+}
+function setAudioLink(link) {
+	document.getElementById("audio").src = link;
+	document.getElementById("audio").play();
 }
