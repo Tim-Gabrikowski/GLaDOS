@@ -22,7 +22,8 @@ const silenceBytes = silenceSamples * (bitDepth / 8) * numChannels;
 const silenceBuffer = Buffer.alloc(silenceBytes, 0);
 
 const piperExecutable = join(dirname, "../../tts/piper/piper");
-const modelPath = join(dirname, "../../tts/voices/en-us-glados-high.onnx");
+// const modelPath = join(dirname, "../../tts/voices/en-us-glados-high.onnx");
+const modelPath = join(dirname, "../../tts/voices/de_DE-thorsten-medium.onnx");
 
 
 export function streamTextResponse(text, response) {
